@@ -50,6 +50,7 @@ namespace Exercicios
                 Console.WriteLine("Aperte Enter para continuar");
                 Console.ReadLine();
                 Console.Clear();
+
             } while (validacao);
         }
     }

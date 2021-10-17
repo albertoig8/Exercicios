@@ -42,6 +42,7 @@ namespace Exercicios
             {
                 Console.WriteLine("Seu IMC é {0}. Você esta acima do peso.", imc);
             }
+
             return this.imc;
         }
     }
