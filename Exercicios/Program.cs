@@ -10,6 +10,9 @@ namespace Exercicios
             bool validacao = true;
             double peso;
             double altura;
+            double salario;
+            double salarioMinimo;
+            double resultado;
 
             Pessoa pessoa = new Pessoa("Alberto");
 
@@ -20,8 +23,9 @@ namespace Exercicios
             {
                 Console.WriteLine("Escolha uma das opções:");
                 Console.WriteLine("(1) - Calcular IMC");
+                Console.WriteLine("(2) - Calcular Salário");
 
-                Console.WriteLine("(5) - Sair");
+                Console.WriteLine("(6) - Sair");
 
                 Console.WriteLine("Digite a sua opção: ");
                 opcao = Convert.ToInt32(Console.ReadLine());
@@ -38,7 +42,17 @@ namespace Exercicios
                         break;
 
 
-                    case 5:
+                    case 2:
+                        Console.WriteLine("Informe o valor do seu salário: ");
+                        salario = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Informe o valor do salário mínimo: ");
+                        salarioMinimo = Convert.ToDouble(Console.ReadLine());
+
+                        resultado = salario / salarioMinimo;
+                        Console.WriteLine("Você recebe {0} Salario(s) mínimo. ", Math.Round(resultado, 1));
+                        break;
+
+                    case 6:
                         validacao = false;
                         break;
 

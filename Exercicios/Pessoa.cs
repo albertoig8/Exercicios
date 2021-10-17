@@ -34,13 +34,13 @@ namespace Exercicios
 
             if(imc < 20)
             {
-                Console.WriteLine("Seu IMC é {0}. Você esta abaixo do peso.", imc);
+                Console.WriteLine("Seu IMC é {0}. Você esta abaixo do peso.", Math.Round(imc, 2));
             } else if(imc >= 20 && imc < 25)
             {
-                Console.WriteLine("Seu IMC é {0}. Parabéns! Você esta no seu peso ideal!", imc);
+                Console.WriteLine("Seu IMC é {0}. Parabéns! Você esta no seu peso ideal!", Math.Round(imc, 2));
             } else
             {
-                Console.WriteLine("Seu IMC é {0}. Você esta acima do peso.", imc);
+                Console.WriteLine("Seu IMC é {0}. Você esta acima do peso.", Math.Round(imc, 2));
             }
 
             return this.imc;
