@@ -23,6 +23,7 @@ namespace Exercicios
             double notaExame;
             double media;
 
+            ProgramAnimal promarmAnimal = new ProgramAnimal();
             double resultado;
 
             Pessoa pessoa = new Pessoa("Alberto");
@@ -36,7 +37,8 @@ namespace Exercicios
                 Console.WriteLine("(1) - Calcular IMC");
                 Console.WriteLine("(2) - Calcular Salário");
                 Console.WriteLine("(3) - Calcular Volume de uma esfera");
-
+                Console.WriteLine("(4) - Calcular Média (Aprovado/ Reeprovado)");
+                Console.WriteLine("(5) - Contador de Animais");
                 Console.WriteLine("(6) - Sair");
 
                 Console.WriteLine("Digite a sua opção: ");
@@ -87,7 +89,7 @@ namespace Exercicios
 
                         if(media >= 7)
                         {
-                            Console.WriteLine("Media obtida: {0}. Aprovado!", Math.Round(media, 2));
+                            Console.WriteLine("Aprovado! Media obtida: {0}. ", Math.Round(media, 2));
                         } else
                         {
                             Console.WriteLine("Digite a nota do exame: ");
@@ -97,13 +99,17 @@ namespace Exercicios
 
                             if(media >= 5)
                             {
-                                Console.WriteLine("Média obtida: {0}. Aprovado em exame!", Math.Round(media, 2));
+                                Console.WriteLine("Aprovado em exame! Média obtida: {0}.", Math.Round(media, 2));
                             } else
                             {
-                                Console.WriteLine("Média obtida: {0}. Reprovado.", Math.Round(media, 2));
+                                Console.WriteLine("Reprovado. Média obtida: {0}.", Math.Round(media, 2));
                             }
                         }
 
+                        break;
+
+                    case 5:
+                        promarmAnimal.start();
                         break;
 
                     case 6:
